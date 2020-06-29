@@ -5,7 +5,7 @@ import { Buttons } from "../../components";
 import styles from "./styles";
 const { height } = Dimensions.get("window");
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image
@@ -27,7 +27,7 @@ const Welcome = () => {
           <Buttons.Default
             label="Sign in"
             icon="long-arrow-right"
-            onPress={() => {}}
+            onPress={() => navigation.navigate("@main")}
           />
           <Buttons.Transparent label="Create an Account" onPress={() => {}} />
         </View>
