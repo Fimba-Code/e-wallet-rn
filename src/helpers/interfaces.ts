@@ -4,3 +4,8 @@ export interface User {
   avatar: string;
   location?: string;
 }
+
+export interface Services {
+  name: string;
+  icon: string;
+}
