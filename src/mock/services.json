@@ -1,0 +1,10 @@
+[
+  { "name": "send money", "icon": "arrow-up" },
+  { "name": "receive money", "icon": "arrow-down" },
+  { "name": "mobile prepaid", "icon": "mobile-alt" },
+  { "name": "electricity bill", "icon": "lightbulb" },
+  { "name": "cashback offer", "icon": "tag" },
+  { "name": "movie ticket", "icon": "ticket-alt" },
+  { "name": "flickt tickets", "icon": "plane-departure" },
+  { "name": "more services", "icon": "buromobelexperte" }
+]
