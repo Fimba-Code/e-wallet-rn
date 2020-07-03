@@ -13,7 +13,11 @@ const FriendsList: React.FC<Props> = ({ list }) => {
   return (
     <View>
       <FlatList
-        contentContainerStyle={{ alignItems: "center", paddingLeft: 13 }}
+        contentContainerStyle={{
+          alignItems: "center",
+          paddingLeft: 13,
+          marginBottom: 40,
+        }}
         data={list}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
