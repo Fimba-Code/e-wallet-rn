@@ -1,15 +1,10 @@
 import faker from "faker";
-
-interface User {
-  fullName: string;
-  avatar: string;
-  location?: string;
-}
+import { User } from "./interfaces";
 
 class Helpers {
   genActiveUser() {
     const user: User = {
-      fullName: faker.fake("{{name.lastName}} {{name.firstName}}"),
+      fullName: faker.fake("{{name.firstName}} {{name.lastName}}"),
       avatar: faker.image.avatar(),
       location: faker.fake("{{address.state}}, {{address.countryCode}}"),
     };
@@ -22,7 +17,8 @@ class Helpers {
 
     for (let index = 0; index < max; index++) {
       users.push({
-        fullName: faker.fake("{{name.lastName}} {{name.firstName}}"),
+        id: faker.random.uuid(),
+        fullName: faker.fake("{{name.firstName}}"),
         avatar: faker.image.avatar(),
       });
     }
