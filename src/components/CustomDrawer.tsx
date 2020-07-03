@@ -9,11 +9,13 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import NavigationList from "./Lists/NavigationList";
 import Logout from "./Buttons/TransparentWithIcon";
 import Constants from "expo-constants";
+import helpers from "../helpers";
 
 const { height } = Dimensions.get("window");
 
 const CustomDrawer = () => {
   const navigation = useNavigation();
+  const user = helpers.genActiveUser();
 
   return (
     <DrawerContentScrollView
@@ -24,11 +26,11 @@ const CustomDrawer = () => {
       <SafeAreaView style={{ flex: 1 }}>
         <View style={style.headerContainer}>
           <View style={style.userBox}>
-            <Avatar uri="https://avatars0.githubusercontent.com/u/12303468?s=460&u=241b4984fae38611d45791610297540a2f7462f4&v=4" />
+            <Avatar uri={user.avatar} />
             <View style={{ flex: 1 }}>
-              <Text style={style.userText}>Bruno Kiafuka</Text>
+              <Text style={style.userText}>{user.fullName}</Text>
               <Text style={style.locationText} numberOfLines={1}>
-                Johannesburg, Gauteng
+                {user.location}
               </Text>
             </View>
           </View>
